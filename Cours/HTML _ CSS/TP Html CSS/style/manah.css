@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+    color: white;
+    background-color: brown;
+    padding: 10px;
+}
+
+h1:hover {
+    background-color: white;
+    color: brown;
+}
+
+p {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+p:active {
+    background-color: brown;
+    color: white;
+}
+
+
+
+a:link {
+    color: brown;
+}
+
+a:visited {
+    color: goldenrod;
+    font-weight: bold;
+}
+
+img:hover {
+    display: none;
+}
+
+#back {
+    text-align: justify;
+    color: white;
+    background-color: brown;
+    align-self:flex-start;
+    padding: 10px;
+    border-radius: 20px;
+}

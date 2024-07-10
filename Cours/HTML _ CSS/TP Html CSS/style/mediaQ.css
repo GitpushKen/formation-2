@@ -1,0 +1,122 @@
+.main {
+    background-color: rgb(224, 224, 224);
+    padding: 20px 20px 20px 5px;
+}
+
+#back {
+    margin: 10px;
+    display: block;
+}
+
+.rules, h3 {
+    padding-left: 20px;
+}
+
+.rules p, h5 {
+    margin: 0;
+}
+
+.rules p {
+    display: none;
+    color: rgb(83, 40, 255);
+}
+
+.texts div {
+    background-color: white;
+}
+.texts div p {
+    padding: 5px 5px 5px 15px;
+}
+
+#rOne {
+    @media screen and (max-width:640px) {
+        display: block;
+    }
+}
+#rTwo {
+    @media screen and (min-width:800px) {
+        display: block;
+    }
+}
+#rThree {
+    @media screen and (min-width: 1024px) and (max-width: 1280px) {
+        display: block;
+    }
+}
+#rFour {
+    @media (max-device-width: 480px) {
+        display: block;
+    }
+}
+#rFive {
+    @media screen and (orientation:portrait) {
+        display: block;
+    }
+}
+#rSix {
+    @media screen and (orientation:landscape) {
+        display: block;
+    }
+}
+
+#un {
+    @media screen and (max-width:640px) {
+        color: white;
+        background-color: rgb(0, 123, 255);
+    }
+}
+#deux {
+    @media screen and (min-width:800px) {
+        color: white;
+        background-color: rgb(0, 123, 255);
+    }
+}
+#trois {
+    @media screen and (min-width: 1024px) and (max-width: 1280px) {
+        color: white;
+        background-color: rgb(0, 123, 255);
+    }
+}
+#quatre {
+    @media (max-device-width: 480px) {
+        color: white;
+        background-color: rgb(0, 123, 255);
+    }
+}
+#cinq {
+    @media screen and (orientation:portrait) {
+        color: white;
+        background-color: rgb(0, 123, 255);
+    }
+}
+#six {
+    @media screen and (orientation:landscape) {
+        color: white;
+        background-color: rgb(0, 123, 255);
+    }
+}
+
+
+@media screen and (max-width:640px) {
+
+}
+
+@media screen and (min-width:800px) {
+    
+}
+
+@media screen and (orientation:landscape) {
+
+}
+
+@media screen and (orientation:portrait) {
+
+}
+
+@media screen , (min-height: 1024px) and (max-width: 1280px) {
+    
+}
+
+@media (max-device-width: 480px) {
+    
+}

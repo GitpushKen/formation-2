@@ -1,0 +1,79 @@
+
+body {
+    background-color: blueviolet;
+    margin: 0;
+}
+
+#back {
+    margin: 10px;
+    display: block;
+}
+
+.margin p {
+    background-color: rgb(196, 196, 196);
+    border: solid rgb(0, 255, 0) 2px;
+}
+
+#pUn {
+    height: 100px;
+    padding: 20px;
+    margin: 0;
+}
+#pDeux {
+    width: 50%;
+    padding: 1.2em;
+    margin: 20px 5px 20px 5px;
+}
+#pTrois {
+    width: 200px;
+    height: 200px;
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+
+form {
+    height: 250px;
+    width: 400px;
+    border: solid black 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: gray;
+    margin: 30px;
+}
+
+
+.box {
+    height: 40px;
+    width: 100%;
+}
+
+.une, .deux, .checker {
+    margin-left: 40px;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+button {
+    padding: 5px;
+}
+
+button:hover {
+    filter: invert();
+}
+
+.box input {
+    margin-left: 20px;
+}
+
+.checker input {
+    margin-left: 0;
+}
+

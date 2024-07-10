@@ -1,0 +1,103 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    display: block;
+    background-color: brown;
+    color: white;
+}
+
+h3 {
+    font-size: 1.7em;
+    display: block;
+    color: white;
+    padding: 5px 0 5px 10px;
+    width: 50%;
+    background: linear-gradient(0.25turn, red , rgb(251, 130, 130), rgba(255, 255, 255, 0.504), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0))
+}
+
+#pink {
+    background-color: brown;
+    margin: 0 10px 0 10px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+em, strong {
+    font-style: normal;
+    font-weight: 100;
+    color: brown;
+}
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+#right {
+    text-align: right;
+    align-self: flex-end;
+    background: linear-gradient(0.75turn, red , rgb(251, 130, 130), rgba(255, 255, 255, 0.504), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    padding: 5px 10px 5px 0;
+}
+
+#center {
+    text-align: center;
+    align-self: center;
+    background: linear-gradient(0.25turn, white , rgb(255, 0, 0), rgba(255, 255, 255, 0));
+}
+
+#pseudolink:link {
+    color:brown;
+}
+
+#pseudolink:visited {
+    color: red;
+
+}
+#pseudolink:hover {
+    color: darkgoldenrod;
+    font-weight: bold;
+}
+
+#back {
+    text-align: justify;
+    color: white;
+    background-color: brown;
+    align-self:flex-start;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#pseudo {
+    background-color: brown;
+    margin: 0 10px 0 10px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: 700px;
+    width: fit-content;
+}

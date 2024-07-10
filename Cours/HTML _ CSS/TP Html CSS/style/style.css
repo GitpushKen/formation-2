@@ -1,0 +1,26 @@
+.tableaux {
+    margin: 50px 0 50px 0;
+    display: flex;
+    gap: 20px;
+}
+
+
+table {
+    border: solid black 2px;
+    border-collapse: collapse;
+}
+
+td, caption, .footer {
+    border: solid black 2px;
+    text-align: center;
+    padding: 5px;
+}
+
+.forms {
+    width: fit-content;
+}
+
+form {
+    border: solid black 2px;
+    padding: 10px;
+}

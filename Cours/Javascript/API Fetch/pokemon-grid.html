@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>Pokemon battle</title>
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="container-screen">
+        <div class="screen">
+          <div class="bg"></div>
+          <div class="screen-grid">
+            <div class="sprite-poke-1"></div>
+            <div class="infosPoke1">
+
+              <img id="bar" src="./imgs/hpbarqs/aibar2.png" alt="" />
+              <p id="name">Name</p>
+              <progress class="healthBar1" value="" max="">70 %</progress>
+            </div>
+
+            <div class="sprite-poke-2"></div>
+            <div class="infosPoke2">
+
+              <img id="bar" src="./imgs/hpbarqs/playerBar2.png" alt="" />
+              <p id="name2">Name</p>
+              <progress class="healthBar2" value="" max=""></progress>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screen-bottom">
+        <div class="bottom-panel">
+        </div>
+        <div class="sphere">
+          <img id="baseDown" class="visible" src="./imgs/HUD/baseButtonSquare-v2.png" alt="">
+          <img id="attackDown" src="./imgs/HUD/baseButtonSquareAttack-v2.png" alt="">
+          <img id="defenseDown" src="./imgs/HUD/baseButtonSquareHeal-v2.png" alt="">
+          <img id="resetDown" src="./imgs/HUD/baseButtonSquareReload.png" alt="">
+          <div class="nes-container is-rounded buttonAttack">
+          </div>
+          <div class="nes-container is-rounded buttonObject">
+          </div>
+          <div class="nes-container is-rounded buttonReset">
+          </div>
+          <div class="pokedex">
+            <img id="opened" src="./imgs/HUD/pokedexOpen.png" alt="" />
+            <img id="closed" src="./imgs/HUD/pokedex.png" alt="" />
+          </div>
+          <div class="toggler">
+
+            <div id="soundToggle">
+              <img class="hide" id="volOff" src="./imgs/HUD/volToggle.png" alt="">
+              <img  id="volOn" src="./imgs/HUD/volToggleOn.png" alt="">
+            </div>
+            <div id="backToggle">
+              <img src="./imgs/HUD/backToggleOn.png" alt="">
+              <a href="./pokemonTitle.html">
+                <img id="backOff" src="./imgs/HUD/backToggle.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="infoPanel">
+            <p id="turn-infos"></p>
+        </div>
+
+      </div>
+    </div>
+    <script src="pokemon.js"></script>
+  </body>
+</html>

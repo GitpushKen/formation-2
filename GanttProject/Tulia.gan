@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Tulia" company="" webLink="http://" view-date="2023-08-01" view-index="0" gantt-divider-location="329" resource-divider-location="300" version="3.3.3307" locale="fr_FR">
+    <description/>
+    <view zooming-state="default:10" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="187" order="0"/>
+        <field id="tpd4" name="Date de début" width="70" order="1"/>
+        <field id="tpd5" name="Date de fin" width="71" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#ff3333 #99ffff #ff9900 #ff00ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="701e1291c5c64b0484043b0467ab02a0" name="Maquette" meeting="false" start="2024-04-22" duration="17" complete="0" expand="true"/>
+        <task id="6" uid="180075d4dcaa46e4b0b390e247d12376" name="Interface" color="#99ffff" meeting="false" start="2024-05-15" duration="33" complete="0" expand="true"/>
+        <task id="3" uid="3f5a7c9bcf264546a4938f97fe1ba153" name="Fonctionnalités de base" color="#ff3333" meeting="false" start="2024-06-10" duration="115" complete="0" expand="true">
+            <notes><![CDATA[Interface
+Messagerie
+Création de profil
+Base de données]]></notes>
+            <task id="7" uid="9755c3b2313a4fe4a80d495f610d71a7" name="Création de profil" meeting="false" start="2024-06-10" duration="42" complete="0" expand="true"/>
+            <task id="12" uid="f5031a44cacb49fe80697ea724c20c36" name="Système de points" meeting="false" start="2024-07-19" duration="21" complete="0" expand="true"/>
+            <task id="8" uid="d7f38a2726f8477bb17de7d4d791c321" name="Messagerie" meeting="false" start="2024-07-26" duration="25" complete="0" expand="true"/>
+            <task id="10" uid="c05e48ae59154d38976aa6bb05ddc4c4" name="Matchmaking" meeting="false" start="2024-08-29" duration="37" complete="0" expand="true"/>
+            <task id="5" uid="5e9c1adce2f04265b9833f73c2fccecc" name="Algorithme de recherche" meeting="false" start="2024-10-14" duration="25" complete="0" expand="true"/>
+        </task>
+        <task id="4" uid="fa8d601a072f450d923fc0321d5944c8" name="Fonctionnalités avancées" color="#ff9900" meeting="false" start="2024-11-18" duration="40" complete="0" priority="2" expand="true">
+            <notes><![CDATA[Aventures
+Places
+]]></notes>
+            <task id="9" uid="2d979cd7b0004faf91743a6a421fa7b2" name="Aspect RPG" meeting="false" start="2024-11-18" duration="40" complete="0" expand="true"/>
+        </task>
+        <task id="11" uid="55d99cec2348482ba23a2478ef1d9df6" name="Finalisation" meeting="false" start="2025-01-13" duration="20" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

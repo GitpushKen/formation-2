@@ -1,0 +1,47 @@
+.imgs {
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    justify-content: center;
+    padding: 0 50px 0 50px;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infos {
+    padding: 0 50px 0 50px;
+}
+
+h1, #quote, a, p {
+    text-align: center;
+    max-width: 1000px;
+}
+
+#quote {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+a {
+    color: brown;
+    text-decoration: none;
+}
+
+
+.more p, #back {
+    text-align: justify;
+    color: white;
+    background-color: brown;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#back {
+    align-self:flex-start;
+    padding: 10px;
+}

@@ -1,0 +1,251 @@
+
+@font-face {
+    font-family: "Press";
+    src: url(../assets/fonts/Press.TTF);
+}
+@font-face {
+    font-family: "Press";
+    src: url(../assets/fonts/PressStart2P-Regular.ttf);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    background-color: rgb(233, 233, 233);
+    overflow-x: hidden;
+    align-items: center;
+}
+
+* {
+    scrollbar-width: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press";
+    font-size: 1em;
+    color: white;
+    height: 100px;
+    border: 5px solid rgb(219, 219, 219);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
+
+
+
+.buttons {
+    display: flex;
+    color: white;
+    gap: 30px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press";
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    width: 90vw;
+}
+
+
+
+aside {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.aside-left {
+    display: flex;
+    align-items: center;
+    transform: translateX(-90%);
+    width: fit-content;
+    padding-left: 15px;
+    height: 100svh;
+    transition: ease-in 300ms;
+}
+
+.aside-right {
+    display: flex;
+    align-items: center;
+    transform: translateX(90.8%);
+    width: fit-content;
+    padding-right: 15px;
+    height: 100vh;
+    transition: ease-in 300ms;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    max-width: 264px;
+    margin: 10px;
+}
+
+.links div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    height: 100%;
+}
+
+.develop {
+    display: flex;
+    align-items: center;
+    padding: 0 5px 0 5px;
+}
+.aside-left.develop {
+    display: flex;
+    align-items: center;
+    padding: 0 5px 0 5px;
+}
+
+
+
+.develop p {
+    height: 30px;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 100px 0 30px 0;
+    color: rgb(19, 19, 19);
+    transition: ease 300ms;
+    font-family: "Press";
+    text-align: center;
+
+}
+
+
+
+
+.intro p {
+    background-color: rgb(245, 245, 245);
+    border-top: solid 20px rgb(40, 40, 40);
+    padding: 30px 5px 30px 5px;
+    min-width: 564px;
+
+}
+.intro p:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    font-size: 0.7em;
+}
+
+.nes-container.is-rounded {
+    border-image-slice: 3;
+    border-image-width: 3;
+    border-image-repeat: stretch;
+    border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg"><path d="M3 1 h1 v1 h-1 z M4 1 h1 v1 h-1 z M2 2 h1 v1 h-1 z M5 2 h1 v1 h-1 z M1 3 h1 v1 h-1 z M6 3 h1 v1 h-1 z M1 4 h1 v1 h-1 z M6 4 h1 v1 h-1 z M2 5 h1 v1 h-1 z M5 5 h1 v1 h-1 z M3 6 h1 v1 h-1 z M4 6 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+    border-image-outset: 2;
+    margin: 4px;
+  }
+
+  .aside-right:hover {
+    transform: translateX(0);
+  }
+  .aside-left:hover {
+    transform: translateX(0);
+  }
+
+  .perso {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+
+.CV {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.CV img:hover {
+    animation: bounce 2s infinite;
+}
+.PF img:hover {
+    animation: bounce 2s infinite;
+}
+
+.PF {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.gif {
+    width: fit-content;
+}
+
+
+#gif {
+    height: 300px;
+    align-self: center;
+    width: fit-content;
+}
+
+.nes-btn {
+  border-image-slice: 2;
+  border-image-width: 2;
+  border-image-repeat: stretch;
+  border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+  border-image-outset: 2;
+  position: relative;
+  display: inline-block;
+  padding: 6px 8px;
+  margin: 4px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0, pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #212529;
+  background-color: #fff;
+}
+

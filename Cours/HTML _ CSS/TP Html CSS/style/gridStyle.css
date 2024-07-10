@@ -1,0 +1,43 @@
+.grid {
+    display: grid;
+    grid-template: 1fr 1fr 4fr 1fr / 1fr 2fr 1fr;
+}
+
+h1 {
+    grid-area: 1 / span 4;
+    text-align: center;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    grid-area: 2 / 2;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+}
+
+div {
+    grid-area: 3 / 1;
+
+}
+
+div:nth-of-type(2) {
+    grid-area: 3 / 2;
+}
+
+div:nth-of-type(3) {
+    grid-area: 3 / 3;
+}
+
+footer {
+    grid-area: 4 / span 4;
+}
+
+img {
+    grid-area: 5 / span 4;
+    width: 100vw;
+}
