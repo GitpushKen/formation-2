@@ -57,13 +57,14 @@ const pokemon = async () => {
 
     const poke = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
     const data = await poke.json();
+    dataPoke.push(data);
     console.log(data);
   }
   for (let i = 0; i < names.length; i++) {
     console.log(names[i])
     pokemons.push(
         new Pokemon(
-          dataPokeFr[i].name,
+          dataPokeFr[i].name[1],
           dataPoke[i].stats[0].base_stat,
           dataPoke[i].stats[1].base_stat,
           dataPoke[i].stats[2].base_stat,
@@ -85,15 +86,17 @@ function displayList() {
     let img = document.createElement("img")
     img.src = `${dataPoke[i].sprites.versions["generation-vii"].icons.front_default}`;
 
-    function upperCased(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    }
+    // function upperCased(string) {
+    //   return string.charAt(0).toUpperCase() + string.slice(1);
+    // }
     
     let li = document.createElement("li");
     li.classList.add('item');
     
     let p = document.createElement('p');
-    p.innerHTML = upperCased(names[i]);
+    p.setAttribute('id',`${[i]}`);
+    // p.innerHTML = upperCased(names[i]);
+    p.innerHTML = `${names[i].fr}`;
 
     li.appendChild(p);
     li.appendChild(img);
