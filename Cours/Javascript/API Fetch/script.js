@@ -1,8 +1,12 @@
+
+
 const pokeObject = document.querySelector(".pokeList");
 let list = document.querySelector("#list");
+let description = document.querySelector(".description");
 let listItems = null;
 const spriteCase = document.querySelector(".sprite")
-
+let menuList = document.querySelector(".menuList");
+let itemMenu = null;
 
 let names = [];
 let imgs = [];
@@ -10,7 +14,7 @@ let pokeUnit = [];
 let pokemons = [];
 let dataPoke = [];
 let dataPokeFr = [];
-
+let dataPokeLegend = [];
 
 
 
@@ -27,7 +31,8 @@ class Pokemon {
     type,
     isLegendary,
     moves,
-    cries
+    cries,
+    infos
   ) {
     this.name = name;
     this.hp = hp;
@@ -41,6 +46,7 @@ class Pokemon {
     this.isLegendary = isLegendary;
     this.moves = moves;
     this.cries = cries;
+    this.infos = infos
   }
 }
 
@@ -49,7 +55,6 @@ const pokemon = async () => {
 
     const pokeFr = await fetch(`https://tyradex.vercel.app/api/v1/pokemon/${i}`)
     const dataFr = await pokeFr.json();
-    console.log(dataFr);
     dataPokeFr.push(dataFr);
 
     // On récupère le nom
@@ -58,10 +63,14 @@ const pokemon = async () => {
     const poke = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
     const data = await poke.json();
     dataPoke.push(data);
-    console.log(data);
+
+    const pokeLegend = await fetch(
+      `https://pokeapi.co/api/v2/pokemon-species/${i}`
+    );
+    const dataLegend = await pokeLegend.json();
+    dataPokeLegend.push(dataLegend);
   }
   for (let i = 0; i < names.length; i++) {
-    console.log(names[i])
     pokemons.push(
         new Pokemon(
           dataPokeFr[i].name[1],
@@ -73,7 +82,8 @@ const pokemon = async () => {
           dataPoke[i].sprites.back_default,
           dataPoke[i].types[0].type.name,
           dataPoke[i].moves[0].move.name,
-          dataPoke[i].cries.latest
+          dataPoke[i].cries.latest,
+          dataPokeLegend[i].flavor_text_entries[0].falvor_text
         )
       );
   }
@@ -108,12 +118,14 @@ function displayList() {
 displayList();
 function displayInfos() {
   let img = null;
+  let txt = null;
   listItems = document.querySelectorAll(".item")
   listItems.forEach((item) => {
     item.addEventListener("click", () => {
       listItems.forEach((item) => {
         item.classList.remove("clicked")
         spriteCase.replaceChildren();
+        description.replaceChildren();
       })
       item.classList.add("clicked")
       for (i = 0; i < listItems.length; i++) {
@@ -121,6 +133,9 @@ function displayInfos() {
           img = document.createElement("img");
           img.src = `${dataPoke[i].sprites.other.showdown.front_default}`;
           spriteCase.appendChild(img);
+          txt = document.createElement("p");
+          txt.innerHTML = `${dataPokeLegend[i].flavor_text_entries[0].flavor_text}`;
+          description.appendChild(txt)
         }
       }
       console.log('clicked');
@@ -137,6 +152,32 @@ function displayInfos() {
 }
 displayInfos()
 };
+function menuButtons() {
+  itemMenu = document.querySelector(".itemMenu");
+  itemMenu.forEach((item) => {
+    item.addEventListener("click", () => {
+      itemMenu.forEach((item) => {
+        item.classList.remove("clicked")
+      })
+      item.classList.add("clicked")
+      // for (i = 0; i < listItems.length; i++) {
+      //   if (itemMenu[i].classList.contains("clicked")) {
+      //     description.appendChild()
+      //   }
+      // }
+      console.log('clicked');
+    })
+  })
+  // for (let i = 0; i < list.length; i++) {
+  //   list[i].addEventListener("click", function() {
+  //     let img = document.createElement("img");
+  //     img.src = `${dataPoke[i].sprites.front_default}`;
+  //     spriteCase.appendChild(img);
+  //     console.log('clicked');
+  //   })
+  // }
+}
+// menuButtons();
 
 
 pokemon();
