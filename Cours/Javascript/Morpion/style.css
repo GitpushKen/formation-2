@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(33, 33, 33);
+    height: 100svh;
+    width: 100svw;
+}
+
+.container-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 350px;
+    width: 350px;
+    border: white solid 2px;
+}
+
+.case {
+    border: white solid 2px;
+    background-color: rgb(60, 60, 60);
+}
