@@ -1,0 +1,9 @@
+
+Trucs relous : 
+Quand parfois, le chargement de la page, créé un mini décalage qui déplace le contenu sur le scroll
+
+Parfois, des éléments chargent en retard, et tu cliques sur l'élément qui t'intéresse et qui lui est pas en retard, mais du coup le truc en retard pop très vite, décalle l'élément qui t'intéresse, et intercepte ton clic
+
+La configuration des cookies
+
+
