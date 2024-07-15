@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(33, 33, 33);
+    height: 100svh;
+    width: 100svw;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 350px;
+    width: 350px;
+    border: white solid 2px;
+}
+
+.cell {
+    border: white solid 2px;
+    background-color: rgb(60, 60, 60);
+}

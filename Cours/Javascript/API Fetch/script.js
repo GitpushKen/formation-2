@@ -51,7 +51,7 @@ class Pokemon {
 }
 
 const pokemon = async () => {
-  for (let i = 1; i < 152; i++) {
+  for (let i = 1; i < 15; i++) {
 
     const pokeFr = await fetch(`https://tyradex.vercel.app/api/v1/pokemon/${i}`)
     const dataFr = await pokeFr.json();
