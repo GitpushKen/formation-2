@@ -7,16 +7,16 @@ body {
     width: 100svw;
 }
 
-.container-board {
+#board {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     height: 350px;
     width: 350px;
     border: white solid 2px;
 }
 
-.case {
+.cell {
     border: white solid 2px;
     background-color: rgb(60, 60, 60);
 }
