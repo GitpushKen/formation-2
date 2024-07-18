@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(33, 33, 33);
+    height: 100svh;
+    width: 100svw;
+    gap: 50px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    width: 100%;
+    height: 100px;
+}
+
+.container-base {
+    display: flex;
+    height: 300px;
+    width: 500px;
+    background-color: rgba(100, 100, 100, 0);
+}
+
+.container-elements {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.container-character {
+    height: 300px;
+    width: 250px;
+    background-color: rgb(150, 150, 150);
+}
+
+.switch {
+    display: flex;
+    position: relative;
+    width: 125px;
+}
+
+.switch img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#one {
+    rotate: 180deg;
+}
