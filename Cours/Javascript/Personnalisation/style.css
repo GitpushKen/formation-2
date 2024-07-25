@@ -6,6 +6,7 @@ body {
     height: 100svh;
     width: 100svw;
     gap: 50px;
+    user-select: none;
 }
 
 .title {
@@ -18,22 +19,98 @@ body {
 }
 
 .container-base {
+    scale: 1.1;
     display: flex;
+    justify-content: center;
     height: 300px;
     width: 500px;
     background-color: rgba(100, 100, 100, 0);
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 135%;
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+#screen {
+    height: 450px;
+    width: 500px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
 }
 
 .container-elements {
     display: flex;
-    width: 100%;
     height: 100%;
+    position: absolute;
+    top: 100px;
+
 }
 
 .container-character {
     height: 350px;
+    width: 100%;
+
+}
+
+.human {
+    display: none;
+}
+.human.active {
+    display: block;
+}
+
+.saiyan {
+    display: none;
+}
+.saiyan.active {
+    display: block;
+}
+
+
+.baseBody {
+    position: absolute;
+    display: flex;
+    height: 350px;
     width: 250px;
-    background-color: rgb(150, 150, 150);
+}
+.baseBodyS {
+    position: absolute;
+    display: flex;
+    height: 350px;
+    width: 250px;
+}
+
+.img {
+    width:100%; 
+
+    object-fit: cover;
+    position: relative;
+}
+
+#long {
+    position: absolute;
+    top: 30px;
+}
+#helmet {
+    position: absolute;
+    top: 0px;
+}
+
+.truc {
+    width:100%; 
+    object-fit: contain;
+    z-index: 0;
 }
 
 .head {
@@ -42,57 +119,240 @@ body {
     align-items: center;
     width: 250px;
     height: 150px;
-    background-color: blue;
+    z-index: 1;
     position: relative;
 }
+.headS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    z-index: 1;
+    position: relative;
+}
+
+.head-base {
+    position: absolute;
+    top: 19%;
+}
+
 .test {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    position: relative;
+}
+
+.test img {
+    position: absolute;
+    top: 19%;
+}
+
+.test.slide1.active {
+    opacity: 1;
+
+    justify-content: center;
+    align-items: center;
     width: 250px;
     height: 150px;
-    background-color: rgb(255, 0, 234);
+
     position: absolute;
 }
-.test-2 {
+.test.slide2.active {
+    opacity: 1;
+
     width: 250px;
     height: 150px;
-    background-color: rgb(145, 45, 136);
+
     position: absolute;
 }
-.test-3 {
+.test.slide3.active {
+    opacity: 1;
+
     width: 250px;
     height: 150px;
-    background-color: rgb(155, 108, 216);
+
     position: absolute;
 }
-.test-4 {
+.test.slide4 {
+    opacity: 1;
+
     width: 250px;
     height: 150px;
-    background-color: rgb(0, 255, 98);
+
     position: absolute;
 }
 
+#saiyan {
+    scale: 1;
+}
+
+.bearb.hidden {
+    opacity: 0;
+}
+.bearb2.hidden {
+    opacity: 0;
+}
+.bearb3.hidden {
+    opacity: 0;
+}
+
+#aura {
+    position: absolute;
+    opacity: 0.3;
+    width: 440px;
+    top: -50%;
+    left: -38%;
+    height: 425px;
+    z-index: 1;
+}
+#aura2 {
+    position: absolute;
+    opacity: 0.2;
+    width: 440px;
+    top: -50%;
+    left: -38%;
+    height: 425px;
+    z-index: 1;
+}
+#aura3 {
+    position: absolute;
+    opacity: 0.2 ;
+    width: 440px;
+    top: -50%;
+    left: -38%;
+    height: 425px;
+    z-index: 1;
+}
+#aura4 {
+    position: absolute;
+    opacity: 0.2;
+    width: 440px;
+    top: -50%;
+    left: -38%;
+    height: 425px;
+    z-index: 1;
+}
+#lighting {
+    position: absolute;
+    opacity: 1;
+    width: 440px;
+    top: -50%;
+    left: -38%;
+    height: 425px;
+    z-index: 1;
+}
+#auraBase {
+    position: absolute;
+    opacity: 1;
+    width: 440px;
+    top: -20%;
+    left: -38%;
+    height: 400px;
+    z-index: 0;
+}
+#auraBase.active {
+    position: absolute;
+    opacity: 1;
+    width: 440px;
+    top: -20%;
+    left: -38%;
+    height: 400px;
+    z-index: 0;
+}
 .body {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 250px;
     height: 200px;
-    background-color: rgb(80, 80, 182);
+    z-index: 0;
+}
+.bodyS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 200px;
+    z-index: 0;
+    position: absolute;
+    bottom: 10%;
+}
+
+.togglers {
+    display: flex;
+    width: 50%;
+    gap: 20px;
+}
+
+#wolf {
+    position: absolute;
+    top: -145px;
+}
+#dragon {
+    position: absolute;
+    top: -145px;
+}
+
+.switchLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    height: 100%;
+    padding-right: 30px;
+
+}
+.switchRight {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 30px;
+
 }
 
 .switch {
     display: flex;
     position: relative;
     width: 125px;
+    height: 100%;
+    z-index: 2;
+}
+
+.bearbutton {
+    display: flex;
+    width: 50%;
+    height: 40px;
+    background-color: white;
+    z-index: 2;
+    position: relative;
+    top: 150px;
+}
+.croissant-button {
+    display: flex;
+    width: 50%;
+    height: 40px;
+    background-color: white;
+    z-index: 2;
+    position: relative;
+    top: 150px;
+}
+.saiyan-button {
+    display: flex;
+    width: 50%;
+    height: 40px;
+    background-color: rgb(255, 200, 0);
+    z-index: 2;
+    position: relative;
+    top: 150px;
 }
 
 .switch img {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
 }
 
-#one {
-    rotate: 180deg;
-
+#one, #two {
+    left: 65%;
 }

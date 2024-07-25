@@ -8,29 +8,101 @@
 </head>
 <body>
     
+    <div class="main">
         <div class="title">
             <h1>TP Personnalisation</h1>
         </div>
         <div class="container-base">
+            <div class="background"></div>
             <div class="container-elements">
-                <div id="one" class="switch">
-                    <img src="btns/triangle-11-48.png" alt="">
+                <div class="switchLeft">
+                    <div id="one" class="switch">
+                        <img src="btns/btnLeft.png" alt="">
+                    </div>
+                    <div id="two" class="switch">
+                        <img src="btns/btnLeft.png" alt="">
+                    </div>
                 </div>
                 <div class="container-character">
-                    <div class="baseBody"></div>
-                    <div class="head">
-                        <div class="test"></div>
-                        <div class="test-2"></div>
-                        <div class="test-3"></div>
-                        <div class="test-4"></div>
+                    <div class="human active">
+                        <div class="baseBody">
+                            <img class="truc" src="./character/base-body.gif" alt="">
+                        </div>
+                        <div class="head">
+                            <div class="test slide1 active">
+                                <img id="long" class="img" src="./character/head-hair-base.gif" alt="">
+                                <img class="bearb" src="./character/bearb-face.gif" alt="">
+                            </div>
+                            <div class="test slide3">
+                                <img src="./character/bearbless-face.gif" alt="">
+                                <img class="bearb2" src="./character/bearb2.gif" alt="">
+    
+                            </div>
+                            <div class="test slide2">
+                                <img id="helmet" class="img" src="./character/krokmou.png" alt="">
+                            </div>
+    
+                            <!-- <div class="test slide3"></div>
+                            <div class="test slide4"></div> -->
+                        </div>
+                        <div class="body">
+                            <div class="test slide1 active">
+                                <img id="wolf" class="img" src="./character/wolf.gif" alt="">
+                            </div>
+                            <div class="test slide2">
+                                <img id="dragon" class="img" src="./character/dragon-shirt.gif" alt="">
+                            </div>
+                            <div class="test slide3"></div>
+                            <div class="test slide4"></div>
+                            <!-- <div class="test slide3"></div>
+                             -->
+                        </div>
                     </div>
-                    <div class="body"></div>
+                    <div class="saiyan">
+                        <div class="baseBodyS">
+                            <img id="auraBase" src="./character/saiyan-aura5.gif.gif" alt="">
+                            <img class="truc" src="./character/base-body-S.gif" alt="">
+                        </div>
+                        <div class="headS">
+                            <div class="test slide4">
+                                <img id="saiyan" class="img" src="./character/head-hair-saiyan.gif" alt="">
+                                <img class="bearb3" src="./character/bearb-base-saiyan.gif" alt="">
+                                <!-- <img id="aura" src="./character/saiyan-aura.gif" alt=""> -->
+                                <img id="aura4" src="./character/saiyan-aura5.gif.gif" alt="">
+                                <img id="lighting" src="./character/saiyan-light.gif" alt="">
+                                <!-- <img id="aura2" src="./character/saiyan-aura2.gif" alt=""> -->
+                                <img id="aura3" src="./character/saiyan-aura3.gif" alt="">
+                            </div>
+                        </div>
+                        <div class="bodyS">
+                            <img src="./character/fists-saiyan.gif" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div id="two" class="switch">
-                    <img src="btns/triangle-11-48.png" alt="">
+                <div class="switchRight">
+                    <div id="three" class="switch">
+                        <img src="btns/btnRight.png" alt="">
+                    </div>
+                    <div id="four" class="switch">
+                        <img src="btns/btnRight.png" alt="">
+                    </div>
                 </div>
             </div>
+
+            <img id="screen" src="./base/board.png" alt="">
+            
         </div>
+    </div>
+
+    <div class="togglers">
+        <div id="bearb-toggle" class="bearbutton">
+        </div>
+        <div id="croissant-toggle" class="croissant-button">
+        </div>
+        <div id="saiyan-toggle" class="saiyan-button">
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
