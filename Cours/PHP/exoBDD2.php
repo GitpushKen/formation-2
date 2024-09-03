@@ -1,6 +1,3 @@
-
-<h1>ExoBDD</h1>
-
 <?php
     $DB_NAME = "Articles";
     $DB_USER = "root";
@@ -11,8 +8,6 @@
     $articles = $bdd->query('SELECT * FROM article;')->fetchAll();
 ?>
 
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,20 +15,13 @@
     <title>Document</title>
 </head>
 <body>
-<form action="resultat.php" method="post">
-    <h2>Titre de l'article</h2>
-    <input type="text" name="nom_article">
-    <h2>Contenu de l'article</h2>
-    <input type="text" name="contenu_article">
-    <button type="submit">Ajouter</button>
-</form>
 
 <?php
     foreach($articles as $article) { ?>
-        <h2><?php echo $article['nom_article']; ?></h2>
-        <h2><?=$article['contenu_article']?></h2>
+        <p>Numéro de l'article : <?=$article['id_article']; ?></p><br>
+        <p>Nom de l'article : <?=$article['nom_article']; ?></p><br>
+        <p>Contenu de l'article : <?=$article['contenu_article']?></p><br><br>
     <?php } ?>
 ?>
 
 </body>
-</html>
