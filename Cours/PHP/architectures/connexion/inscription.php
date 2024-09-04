@@ -5,6 +5,7 @@
         $select = $bdd->prepare('SELECT email_user FROM users WHERE email_user=:email_user;');
         $select->bindParam(':email_user', $_POST['form_email']);
         $select->execute();
+        var_dump('user');
         if(empty($select->fetch(PDO::FETCH_COLUMN))) {
             $insert = $bdd->prepare('INSERT INTO users(email_user, pass_user) VALUES(:email_user, :pass_user);');
             $insert->bindParam(':email_user', $_POST['form_email']);
