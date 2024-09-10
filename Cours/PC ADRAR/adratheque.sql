@@ -1,0 +1,23 @@
+DROP DATABASE IF EXISTS TPAdrartheque;
+
+CREATE DATABASE TPAdrartheque;
+USE TPAdrartheque;
+
+CREATE TABLE LIVRES (
+	livre_id INT NOT NULL AUTO_INCREMENT,
+	livre_titre VARCHAR(50) NOT NULL, 
+    livre_auteur VARCHAR(50) NOT NULL, 
+    livre_isbn VARCHAR(50) NOT NULL UNIQUE,
+    PRIMARY KEY (livre_id)
+) ENGINE InnoDB DEFAULT CHARSET = utf8mb4;
+
+CREATE TABLE MEMBRES (
+	membre_id INT NOT NULL AUTO_INCREMENT,
+	PRIMARY KEY (membre_id)
+) ENGINE InnoDB DEFAULT CHARSET = utf8mb4;
+
+CREATE TABLE EMPRUNTER (
+	id_livre INT REFERENCES LIVRES (livre_id),
+	id_membre INT REFERENCES LIVRES (membre_id),
+    emprunter_date DATETIME NOT NULL
+) ENGINE InnoDB DEFAULT CHARSET = utf8mb4;
