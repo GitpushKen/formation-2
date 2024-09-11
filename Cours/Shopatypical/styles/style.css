@@ -46,7 +46,7 @@ main {
     z-index: 10;
 }
 
-#id-panel, #connect-panel, #inscript-panel {
+.panel {
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -60,6 +60,24 @@ main {
     font-size: 3rem;
     background: #B87BBF;
     border-radius: 30px;
+}
+
+#r-panel {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.icons {
+    height: 60px;
+    opacity: .5;
+    padding: 15px;
+}
+
+.icons:hover {
+    opacity: 1;
 }
 
 #id-panel.active {

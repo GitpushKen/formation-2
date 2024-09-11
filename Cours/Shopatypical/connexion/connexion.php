@@ -26,11 +26,10 @@
         foreach ($select as $key => &$val) {
             if($val['utilisateur_mdp'] == $_POST['form_password'] && $val['utilisateur_pseudo'] == $_POST['form_pseudo']) {
 
-                $_SESSION['user'] = $val;
+                $_SESSION['username'] = $val['utilisateur_prenom'];
                 echo ('<p>success</p>');
                 var_dump($_SESSION['user']) ;
-                $session = $_SESSION['user'];
-                header('Location: ../views/success.php');
+                header('Location: ../index.php');
             } else {
                     echo ('<p>fail</p>');
                 }
