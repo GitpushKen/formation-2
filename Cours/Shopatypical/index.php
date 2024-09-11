@@ -28,10 +28,22 @@ $utilisateurs = $utilisateur->select();
         <img id="top-left" src="./assets/imgs/desktop_bg/top_left.svg" alt="top-left">
     </div>
     <header>
+<<<<<<< HEAD
         <a class="logo" href="./index.php">
         <img src="./assets/imgs/logo.svg" alt="logo">
         </a>
         
+=======
+        <div class="logo">
+            <img src="./assets/imgs/logo.svg" alt="logo">
+        </div>
+        <?php 
+            if(!empty($_SESSION['username'])) {
+                ?> 
+                <p>Bienvenue <?php echo $_SESSION['username']?></p>
+                <a href="./connexion/deconnexion.php">Se déconnecter</a>
+            <?php } ?>
+>>>>>>> 3740ee793ddeaa36b513b720df6598a4decdec88
 
         <div class="profile">
             <?php 
@@ -81,11 +93,20 @@ $utilisateurs = $utilisateur->select();
                         <input type="text" name="form_pseudo">
                         <label for="form_mdp">Mot de passe:</label>
                         <input type="password" name="form_mdp">
+<<<<<<< HEAD
+=======
+                        <select name="form_role">
+                        <?php foreach ($roles as $role) { ?>
+                            <option value="<?= $role['role_id'] ?>"><?= $role['role_libelle'] ?></option>
+                        <?php } ?>
+                        </select>
+>>>>>>> 3740ee793ddeaa36b513b720df6598a4decdec88
                         <input type="submit" value="Ajouter">
                     </form>
                 </div>
             <?php } else {
                 ?> 
+<<<<<<< HEAD
                 <div class="registered-session">
                 <div id="registered">
                     <div id="r-bg" class="panel"></div>
@@ -134,6 +155,16 @@ $utilisateurs = $utilisateur->select();
                 </div>
                 </div>
 
+=======
+                <div id="registered">
+                    <div id="r-panel" class="panel">
+                        <img src="./assets/imgs/icons/0.svg" alt="" class="icons">
+                        <img src="./assets/imgs/icons/1.svg" alt="" class="icons">
+                        <img src="./assets/imgs/icons/2.svg" alt="" class="icons">
+                        <img src="./assets/imgs/icons/3.svg" alt="" class="icons">
+                    </div>
+                </div>
+>>>>>>> 3740ee793ddeaa36b513b720df6598a4decdec88
             <?php } ?>
 
     </main>
