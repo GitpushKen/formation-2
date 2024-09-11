@@ -7,22 +7,20 @@ class Utilisateur
 
     public function __construct($db)
     {
-        $this->insert = $db->prepare("INSERT INTO utilisateurs(utilisateur_nom, utilisateur_prenom, utilisateur_pseudo, utilisateur_mdp, id_role) 
-                                      VALUES(:utilisateur_nom, :utilisateur_prenom, :utilisateur_pseudo, :utilisateur_mdp, :id_role);");
+        $this->insert = $db->prepare("INSERT INTO utilisateurs(utilisateur_nom, utilisateur_prenom, utilisateur_pseudo, utilisateur_mdp) 
+                                      VALUES(:utilisateur_nom, :utilisateur_prenom, :utilisateur_pseudo, :utilisateur_mdp);");
         $this->select = $db->prepare("SELECT * 
-                                      FROM utilisateurs
-                                      JOIN roles ON (roles.role_id = utilisateurs.id_role);");
+                                      FROM utilisateurs");
     }
 
-    public function insert($sNom, $sPrenom, $sPseudo, $sMdp, $iIdRole)
+    public function insert($sNom, $sPrenom, $sPseudo, $sMdp)
     {
         $r = true;
         $this->insert->execute(array(
             ":utilisateur_nom" => strtoupper($sNom),
             ":utilisateur_prenom" => ucfirst(strtolower($sPrenom)),
             ":utilisateur_pseudo" => $sPseudo,
-            ":utilisateur_mdp" => $sMdp,
-            ":id_role" => $iIdRole
+            ":utilisateur_mdp" => $sMdp
         ));
         if ($this->insert->errorCode() != 0) {
             print_r($this->insert->errorInfo());

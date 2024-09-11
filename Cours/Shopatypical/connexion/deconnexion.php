@@ -1,6 +1,7 @@
 <?php
+session_start();
     include_once('./connect.php');
 
     session_destroy();
-    header('Location: connexion.php');
+    header('Location: ../index.php');
 ?>
