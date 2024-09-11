@@ -68,7 +68,6 @@ main {
     transition: 0.4s;
 }
 
-<<<<<<< HEAD
 #registered {
     height: fit-content;
     max-width: 505px;
@@ -203,26 +202,6 @@ main {
 
 
 
-=======
-#r-panel {
-    height: fit-content;
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-}
-
-.icons {
-    height: 60px;
-    opacity: .5;
-    padding: 15px;
-}
-
-.icons:hover {
-    opacity: 1;
-}
-
->>>>>>> 3740ee793ddeaa36b513b720df6598a4decdec88
 #id-panel.active {
     display: flex;
 }
