@@ -28,9 +28,18 @@ $utilisateurs = $utilisateur->select();
         <img id="top-left" src="./assets/imgs/desktop_bg/top_left.svg" alt="top-left">
     </div>
     <header>
+        <div class="logo-bloc">
         <a class="logo" href="./index.php">
         <img src="./assets/imgs/logo.svg" alt="logo">
         </a>
+        <?php 
+            if(!empty($_SESSION['username'])) {
+                ?> 
+        <div class="cheering">
+                <p class="cheer">Bienvenue <?php echo $_SESSION['username']?></p>
+        </div>
+        <?php } ?>
+        </div>
         
 
         <div class="profile">
@@ -38,12 +47,9 @@ $utilisateurs = $utilisateur->select();
             if(!empty($_SESSION['username'])) {
                 ?> 
                 <a href="./views/user_profile.php">
-                <img src="./assets/imgs/profile.svg" alt="profile-icon">
+                <img src="./assets/imgs/profile-connected.png" alt="profile-icon">
                 </a>
-                <div class="cheering">
-                <p class="cheer">Bienvenue <?php echo $_SESSION['username']?></p>
 
-                </div>
             <?php } ?>
         </div>
     </header>
@@ -118,6 +124,15 @@ $utilisateurs = $utilisateur->select();
                         </div>
 
                     </div>
+                    <div class="search-box">
+                        <div class="search-bar">
+                            <input class="search" type="text" >
+                            <p id="hover-toggle" >Rechercher...</p>
+                            <div class="map-target">
+                                <img src="./assets/imgs/maptarget.png" alt="">
+                            </div>
+                        </div>
+                    </div>
                     <script src="./JS/toggler.js"></script>
                 </div>
                 <div class="maps">
@@ -135,7 +150,6 @@ $utilisateurs = $utilisateur->select();
                 </div>
 
             <?php } ?>
-
     </main>
     <footer>
 

@@ -27,8 +27,6 @@
             if($val['utilisateur_mdp'] == $_POST['form_password'] && $val['utilisateur_pseudo'] == $_POST['form_pseudo']) {
 
                 $_SESSION['username'] = $val['utilisateur_prenom'];
-                echo ('<p>success</p>');
-                var_dump($_SESSION['user']) ;
                 header('Location: ../index.php');
             } else {
                     echo ('<p>fail</p>');

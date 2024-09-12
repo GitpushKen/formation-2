@@ -6,8 +6,6 @@ const inscript = document.querySelector('#inscript');
 const inscript_panel = document.querySelector('#inscript-panel');
 
 
-
-
 connect.addEventListener('click', () => {
     id_panel.classList.remove('active');
     connect_panel.classList.add('active');

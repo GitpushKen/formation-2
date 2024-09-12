@@ -8,6 +8,46 @@ const bar2 = document.querySelector('#bar_two');
 const burger = document.querySelector('#burger');
 const registered = document.querySelector('#registered');
 const rBg = document.querySelector('#r-bg');
+const background = document.querySelector('.background');
+
+
+const searchBar = document.querySelector('.search-bar');
+const search = document.querySelector('.search');
+const textBar = document.querySelector('#hover-toggle');
+const mapTarget = document.querySelector('.map-target');
+
+let focused = false;
+
+searchBar.addEventListener('mouseover', () => {
+    searchBar.classList.add('unfolded')
+    textBar.classList.add('unfolded')
+    mapTarget.classList.add('unfolded')
+})
+
+searchBar.addEventListener("mouseleave", () => {
+    if (!focused) {
+        searchBar.classList.remove('unfolded')
+        textBar.classList.remove('unfolded')
+        mapTarget.classList.remove('unfolded')
+    }
+});
+
+
+
+
+
+searchBar.addEventListener('click', () => {
+    focused = true;
+    return;
+})
+
+search.addEventListener('focusout', () => {
+    searchBar.classList.remove('unfolded')
+    textBar.classList.remove('unfolded')
+    mapTarget.classList.remove('unfolded')
+    focused = false;
+})
+
 
 let deployed = false;  
 
