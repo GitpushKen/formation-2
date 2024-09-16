@@ -1,0 +1,10 @@
+<div class="container-list">
+    <h1>{{title}}</h1>
+    <ul>
+        <li *ngFor="let list of lists">{{list}} 
+            <button (click)='supprTache()'>Supprimer</button>
+        </li>
+    </ul>
+</div>
+<input [(ngModel)]='nouvelleTache' type="text" name="" id="" placeholder="Votre nouvelle tâche">
+<button (click)='ajoutTache()'>Ajouter</button>
