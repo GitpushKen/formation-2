@@ -1,0 +1,12 @@
+.invisible {
+    display: none;
+}
+
+@font-face {
+    font-family: 'Ultra';
+    src: url(../../public/assets/fonts/Ultra-Regular.ttf);
+}
+@font-face {
+    font-family: 'Playfair';
+    src: url(../../public/assets/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}

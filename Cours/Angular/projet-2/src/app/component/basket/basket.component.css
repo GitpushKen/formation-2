@@ -1,0 +1,135 @@
+
+
+.main {
+    width: 99svw;
+    height: 98svh;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.stand {
+    width: 50%;
+    height: 100%;
+    background-color: blueviolet;
+
+    border-radius: 10px;
+    
+}
+
+.basket-container {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border-radius: 10px;
+    width: 17svw;
+    font-family: 'Playfair';
+}
+
+.panier {
+    scrollbar-width: none;
+    overflow: scroll;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    max-width: 100%;
+    padding: 20px 20px 20px 20px;
+    background-color: rgb(212, 165, 255);
+    border-radius: 10px;
+    border: solid 3px blueviolet;
+    
+}
+
+ul {
+    width: fit-content;
+    max-width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 130px;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+    background-color: white;
+
+}
+
+.selected {
+    border: solid rgb(68, 254, 68) 3px;
+}
+
+img {
+    object-fit: contain;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+}
+.basket {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+
+}
+
+.basket li {
+    box-shadow: 0 6px 0 0 rgb(222, 187, 255);
+    max-width: 90px;
+}
+
+
+
+.botCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.total-infos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+
+}
+.basket-container h2 {
+    padding-left: 20px;
+    color: white;
+}
+
+.total-infos h3 {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    font-family: 'Ultra';
+    text-shadow: 0 4px rgb(74, 2, 141);
+}
+
+.panier.empty {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair';
+    font-weight: bold;
+    color: white;
+}

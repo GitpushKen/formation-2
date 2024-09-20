@@ -1,10 +1,16 @@
-<div class="container-list">
-    <h1>{{title}}</h1>
-    <ul>
-        <li *ngFor="let list of lists">{{list}} 
-            <button (click)='supprTache()'>Supprimer</button>
-        </li>
-    </ul>
+<div class="main">
+    <div class="container-list">
+        <div class="top">
+            <h1>{{title}}</h1>
+            <h3>Tasks remaining : {{counter}}</h3>
+            <strong>J'offre les croissants demain</strong>
+        </div>
+        <ul>
+            <li *ngFor="let list of lists; let pos = index" [ngClass]="{completed : list.completed}">{{list.name}} 
+                <img id="button" [src]="imageUrl1" alt="" (click)='supprTache(pos)'>
+            </li>
+        </ul>
+        <input [(ngModel)]='nouvelleTache' type="text" name="" id="" placeholder="Your new task">
+    <button (click)='ajoutTache()'>Add</button>
+    </div>
 </div>
-<input [(ngModel)]='nouvelleTache' type="text" name="" id="" placeholder="Votre nouvelle tâche">
-<button (click)='ajoutTache()'>Ajouter</button>

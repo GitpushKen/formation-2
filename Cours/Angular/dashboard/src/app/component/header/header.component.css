@@ -1,0 +1,28 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.container-header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:flex-start;
+    width: fit-content;
+    margin-left: 20px;
+    border-radius: 20px;
+    padding: 10px 10px 20px 10px;
+    background-color: rgb(72, 41, 27);
+}

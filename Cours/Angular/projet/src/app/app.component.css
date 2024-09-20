@@ -17,3 +17,7 @@
     padding-top: 10px;
     background-image: -moz-linear-gradient(to left, rgb(54, 212, 237), rgb(255, 144, 179));
 }
+
+.content {
+    display: flex;
+}

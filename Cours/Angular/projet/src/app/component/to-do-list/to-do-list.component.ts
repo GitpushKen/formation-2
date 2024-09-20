@@ -10,24 +10,26 @@ import { CommonModule } from '@angular/common';
   styleUrl: './to-do-list.component.css'
 })
 export class ToDoListComponent {
-  title:string = "Tâches";
+  title:string = "Tasks";
   lists:string[] = ['tache1', 'tache2', 'tache3'];
+  counter:number = this.lists.length;
   nouvelleTache:string = '';
+  imageUrl1 = "/assets/done.png";
 
   ajoutTache() {
     if(this.nouvelleTache){
       this.lists.push(this.nouvelleTache);
       this.nouvelleTache ='';
+      this.counter++;
     } else {
       alert(`Vous n'avez rien saisi`)
     }
   }
-  supprTache() {
-    if(this.nouvelleTache){
-      this.lists.push(this.nouvelleTache);
-      this.nouvelleTache ='';
-    } else {
-      alert(`Vous n'avez rien saisi`)
-    }
+  supprTache(pos:number) {
+    this.lists.splice(pos, 1)
+    this.counter--;
   }
+
+  
+  
 }

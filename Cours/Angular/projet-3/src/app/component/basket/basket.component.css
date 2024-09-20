@@ -1,0 +1,110 @@
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.stand {
+    width: 50%;
+    height: 100%;
+    background-color: blueviolet;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    
+}
+.panier {
+    scrollbar-width: none;
+    overflow: scroll;
+    height: 45svh;
+    justify-content: center;
+    align-items: center;
+    width: 17svw;
+    padding: 20px 20px 20px 20px;
+    background-color: rgb(212, 165, 255);
+    border-radius: 10px;
+    border: solid 3px blueviolet;
+    
+}
+
+ul {
+    width: fit-content;
+    max-width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 150px;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+    background-color: white;
+
+}
+
+.selected {
+    border: solid rgb(68, 254, 68) 3px;
+}
+img {
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+}
+.basket {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+
+}
+
+.basket li {
+    box-shadow: 0 6px 0 0 rgb(222, 187, 255);
+}
+
+.basket-container {
+    background-color: blueviolet;
+    height: 60%;
+    border-radius: 10px;
+    font-family: 'Playfair';
+}
+
+.botCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.total-infos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+
+}
+.basket-container h2 {
+    padding-left: 20px;
+    height: 100%;
+    color: white;
+}
+
+.total-infos h3 {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    font-family: 'Ultra';
+    text-shadow: 0 4px rgb(74, 2, 141);
+}

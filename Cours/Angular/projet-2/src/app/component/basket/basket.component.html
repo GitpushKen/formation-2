@@ -1,0 +1,45 @@
+<!-- [ngClass]="{'selected' : item.selected}" (click)="(!item.selected) ?
+        item.selected = true :
+        item.selected = false" -->
+
+
+<div class="main">
+    <div class="stand">
+        <h1>{{title}}</h1>
+        <ul>
+            <li *ngFor="let item of displayList; let pos = index" >
+                {{item.name}}
+                <img [src]="item.imgUrl" alt="">
+                {{item.description}}
+                <button (click)="basketFruit(item)">panier</button>
+            </li>
+        </ul>
+    </div>
+    <div class="basket-container">
+        <h2>Panier</h2>
+        <div *ngIf="basketList.notEmpty"  class="panier">
+            <ul class="basket" >
+                <li *ngFor="let item of basketList; let i = index">{{item.name}}
+                    <img [src]="item.imgUrl" alt="">
+                    <div class="botCard">
+                        <div class="buttons">
+                            <button (click)="minusFruit(item, i)">-1</button>
+                            <button (click)="counterFruit(item)">+1</button>
+                        </div>
+                        {{item.counter}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="infosVide">
+            <h4 class="empty" *ngIf="!basketList.notEmpty">Votre panier est vide :'(</h4>
+        </div>
+        <div *ngIf="basketList.notEmpty" class="total-infos">
+            <h4 >Articles : {{total}}</h4>
+            <h3 id="price">{{displayPrice}}€</h3>
+        </div>
+    </div>
+
+
+</div>
+
