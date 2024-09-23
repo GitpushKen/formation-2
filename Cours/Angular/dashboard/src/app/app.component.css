@@ -2,7 +2,7 @@
 
 
 main {
-    background-color: rgb(228, 205, 167);
+    background-color: rgb(25, 25, 25);
     width: 100svw;
     height: 100svh;
     display: flex;
@@ -14,9 +14,9 @@ main {
 .container-app {
     width: 92%;
     height: 90%;
-    background-color: rgba(255, 255, 255, 0.863);
-    border-radius: 30px;
+    background-color: rgba(50, 50, 50, 0.863);
+    border-radius: 50px;
     opacity: 0.9;
-    box-shadow: 0 0px 40px 40px rgba(0, 0, 0, 0.203);
+    box-shadow: 0 0px 40px 40px rgba(25, 25, 25, 0.203);
     display: flex;
 }
