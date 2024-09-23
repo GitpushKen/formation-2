@@ -5,13 +5,57 @@ main {
     width: 100%;
     border-radius: 10px;
 }
+.main-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+    width: 280px;
+    height: fit-content;
+    border-radius: 30px;
+    background: url(../../../../public/assets/7724f9d94ff260df061d8481ac503443.png);
+    background-size: 350px;
+
+}
+.bottom {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(255, 192, 58);
+  border-radius: 0 0 30px 30px;
+  height: 40px;
+  color: rgba(0, 0, 0, 0.435);
+  font-size: 0.7rem;
+}
+
+.bottom p {
+  margin-left: 20px;
+  font-weight: 900;
+}
 
 .title {
     display: flex;
     align-items: center;
-    height: 70px;
+    justify-content: space-between;
+    height: 50px;
     font-size: 0.9rem;
     color: white;
+    width: 100%;
+}
+
+.bar1, .bar2 {
+  width:50px;
+  height: 5px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.title h2 {
+  color: black;
+  font-weight: 900;
 }
 
 .container {
@@ -22,35 +66,184 @@ main {
     align-items:flex-start;
     height: 300px;
     width: 250px;
-    margin-left: 20px;
+
     border-radius: 20px;
-    padding: 10px 10px 20px 10px;
+
 
 
 }
 
 .container.card {
+  margin-top: 15px;
   background-color: rgba(196, 178, 171, 0);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 0;
+  position: relative;
+  transition: all 0.6s ease-out;
+  perspective: 1000px;
+  align-items: center;
+  object-fit:cover;
+
 }
 
-img {
+.container.card:hover {
+  transition: all 0.3s linear;
+  scale: 1.03;
+}
+
+
+.tilt-box {
   width: 100%;
-  height: 100%;
+  height: 300px;
+  border-radius: 20px;
+  position: relative;
+  background: rgb(24, 23, 23);
+  background-size: 1500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.6s ease-out;
+  transform: rotateX(0deg) rotateY(0deg);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  object-fit:cover;
+  z-index: 1;
+
+  backdrop-filter: blur(20px)
+}
+
+.profilBox {
+  height: 300px;
+  width: 250px;
+  position: absolute;
+  object-fit:cover;
+
+}
+
+.container.card img {
+  position: absolute;
+  width: 95%;
+  height:  95%;
+  z-index: 0;
   border-radius: 20px;
 }
 
-/* Test  */
+.tilt-box.box img {
+  height: 70px;
+  width: 70px;
+  border-radius: 0px;
+  transition: all 0.4s ease-out;
+}
 
-.magic {
-  z-index: 5;
+
+h1 {
+  transition: all 0.4s linear;
+  color: rgb(255, 192, 58);
+}
+
+
+.t_hover {
+  width: 33.333%;
+  height: 33.333%;
   position: absolute;
-  top: calc(50% - 10rem);
-  left: calc(50% - 10rem);
-  width: 20rem;
-  height: 20rem;
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/hover-reveal.jpg') 50% 50% no-repeat fixed;
-  background-size: cover;
-  border-radius: 50%;
+  z-index: 2;
+}
+
+.header {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
+  padding-bottom: 20px;
+}
+
+.gif img {
+  width: 200px;
+  position: absolute;
+  bottom: 70px;
+  left: 80Px;
+}
+
+app-nav {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.t_hover:nth-child(1){ left:0; top:0}
+.t_hover:nth-child(2){ left:33.333%; top:0;; height: 110px;}
+.t_hover:nth-child(3){left:66.666%; top:0;}
+.t_hover:nth-child(4){left:0; top:33.333%;; width: 100px;}
+.t_hover:nth-child(5){ left:30%; top:33.333%; ; border-radius: 50%;width: 100px;height: 100px;}
+.t_hover:nth-child(6){left:62%; top:33.333%;; width: 95px;}
+.t_hover:nth-child(7){left:0; top:66.666%;}
+.t_hover:nth-child(8){left:33.333%; top:63.333%;;height: 110px;}
+.t_hover:nth-child(9){left:66.666%; top:66.666%;}
+
+.t_hover:nth-child(1):hover ~ .tilt-box{ background: rgba(18, 18, 18, 0.804); transform: rotateX(-10deg)  rotateY(10deg);
+}
+.t_hover:nth-child(1):hover ~ .tilt-box.box img{opacity: 0; filter: blur(20px);
+}
+
+
+.t_hover:nth-child(2):hover ~ .tilt-box{background: rgba(18, 18, 18, 0.804); transform: rotateX(-10deg)  rotateY(0deg); }
+.t_hover:nth-child(2):hover ~ .tilt-box.box img{opacity: 0; filter: blur(20px)
+}
+
+.t_hover:nth-child(3):hover ~ .tilt-box{ background: rgba(18, 18, 18, 0.804); transform: rotateX(-10deg)  rotateY(-10deg);}
+.t_hover:nth-child(3):hover ~ .tilt-box.box img{opacity: 0; filter: blur(20px)
+}
+
+.t_hover:nth-child(4):hover ~ .tilt-box{background: rgba(18, 18, 18, 0.804); transform: rotateX(0deg)  rotateY(10deg); }
+.t_hover:nth-child(4):hover ~ .tilt-box.box img{opacity: 0; filter: blur(20px)
+}
+
+.t_hover:nth-child(5):hover ~ .tilt-box{ backdrop-filter: none;background: rgba(18, 18, 18, 0); transform: rotateX(0deg)  rotateY(-180deg);}
+.t_hover:nth-child(5):hover ~ .tilt-box.box img{opacity: 0; filter: blur(20px)
+}
+.t_hover:nth-child(5):hover ~ .profil { height: 100%; width: 100%;
+}
+.t_hover:nth-child(5):hover ~ .tilt-box.box>.infos {color: white; opacity: 0;filter: blur(50px)
+}
+
+.t_hover:nth-child(6):hover ~ .tilt-box{background: rgba(18, 18, 18, 0.804); transform: rotateX(0deg)   rotateY(-10deg); }
+.t_hover:nth-child(6):hover ~ .tilt-box.box img{opacity: 0; filter: blur(20px)
+}
+
+
+.t_hover:nth-child(7):hover ~ .tilt-box{background: rgba(18, 18, 18, 0.804); transform: rotateX(10deg) rotateY(10deg);}
+.t_hover:nth-child(7):hover ~ .tilt-box.box img{opacity: 0; filter: blur(20px)
+}
+
+
+.t_hover:nth-child(8):hover ~ .tilt-box{background: rgba(18, 18, 18, 0.804); transform: rotateX(10deg)   rotateY(0deg); }
+.t_hover:nth-child(8):hover ~ .tilt-box.box img{opacity: 0; filter: blur(20px)
+}
+
+
+.t_hover:nth-child(9):hover ~ .tilt-box{background: rgba(18, 18, 18, 0.804); transform: rotateX(10deg)   rotateY(-10deg); }
+.t_hover:nth-child(9):hover ~ .tilt-box.box img{opacity: 0; filter: blur(20px)
+}
+.t_hover:nth-child(9):hover ~ .tilt-box.box img{opacity: 0; filter: blur(20px)
+}
+
+
+
+.infos {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  color: rgb(255, 192, 58);
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+.infos>.name {
+  font-size: 4rem;
+}
+.t_hover:hover ~ .tilt-box.box>.infos {
+  opacity: 1;
+
 }
