@@ -16,3 +16,7 @@
     font-family: 'nunito';
     src: url(../public/assets/fonts/Nunito-VariableFont_wght.ttf);
 }
+@font-face {
+    font-family: 'hand';
+    src: url(../public/assets/fonts/JustAnotherHand-Regular.ttf);
+}
