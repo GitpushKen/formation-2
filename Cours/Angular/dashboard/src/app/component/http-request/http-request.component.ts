@@ -4,7 +4,8 @@ import { FormsModule} from '@angular/forms'
 import { HttpRequestServiceService } from '../http-request-service.service';
 import { HttpClient } from '@angular/common/http';
 import { PokeDetailsComponent } from "../poke-details/poke-details.component";
-import { Observable } from 'rxjs';
+import { ShowedPokeComponent } from "../showed-poke/showed-poke.component";
+
 
 
 
@@ -12,7 +13,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-http-request',
   standalone: true,
-  imports: [CommonModule, FormsModule, PokeDetailsComponent,],
+  imports: [CommonModule, FormsModule, PokeDetailsComponent, ShowedPokeComponent],
   templateUrl: './http-request.component.html',
   styleUrl: './http-request.component.css'
 })
@@ -21,6 +22,7 @@ export class HttpRequestComponent {
   list:any = []
   listPoke:any = []
   showedPoke:any = []
+  namePoke:any= []
 
   constructor(private getPoke: HttpRequestServiceService, private detail:HttpClient) {
 
@@ -37,25 +39,26 @@ export class HttpRequestComponent {
     //     this.listPoke.push(this.list[i])
     //     // this.pokemons.forEach((p:string) => {
     //     //   this.list.push(p)
-    //     // }); 
+    //     // });
 
-        
+
     //   }
     //   console.log(this.listPoke);
     //   }
     // })
   }
 
+
   getDetail(){
-    this.showedPoke = this.getPoke.getInfo2()
+
+    console.log(this.showedPoke)
   }
 
   recevoirPokeInfo(id:any) {
-    this.listPoke = this.getPoke.recevoirPokeInfos(id);
-    this.showedPoke = this.getPoke.getInfo2()
-    this.listPoke = this.getPoke.getInfo();
+    this.namePoke = this.getPoke.recevoirPokeInfos(id);
+    this.showedPoke = this.getPoke.getFullData()
 
   }
 }
 
-// Faire un input vers poke-details enfant 
+// Faire un input vers poke-details enfant

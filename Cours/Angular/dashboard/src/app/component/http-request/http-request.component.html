@@ -3,3 +3,4 @@
 <ul>
     <app-poke-details (pokeInfos)="recevoirPokeInfo($event)" *ngFor="let item of listPoke; let i = index" [item]="item"></app-poke-details>
 </ul>
+<app-showed-poke *ngFor="let item of showedPoke; let i = index" [item]="item"></app-showed-poke>

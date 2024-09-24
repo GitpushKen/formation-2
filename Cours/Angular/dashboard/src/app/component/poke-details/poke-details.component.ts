@@ -1,48 +1,35 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { CommonModule } from '@angular/common';
 import { HttpRequestServiceService } from '../http-request-service.service';
 import { HttpRequestComponent } from '../http-request/http-request.component';
+import { ShowedPokeComponent } from '../showed-poke/showed-poke.component';
+import { cpSync } from 'fs';
 
-interface pokemonDetail{
-  results : [
-    [
-      {
-        id : [
-          {
-            name:string
-            url:string
-          }
-        ]
-      }
-    ]
-  ]
-}
+
 
 @Component({
   selector: 'app-poke-details',
   standalone: true,
-  imports: [HttpRequestComponent],
+  imports: [HttpRequestComponent, CommonModule, ShowedPokeComponent],
   templateUrl: './poke-details.component.html',
   styleUrl: './poke-details.component.css'
 })
 export class PokeDetailsComponent {
+  showedPoke:any = []
 
-  constructor(private detail:HttpRequestServiceService, private getDetail:HttpClient) {}
-
-  private apiUrl2 = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20'
-
-  details() : Observable<pokemonDetail> {
-    return this.getDetail.get<pokemonDetail>(`${this.apiUrl2}`)
-  }
+  constructor(private getPoke:HttpRequestServiceService,) {}
 
 
   @Input() item:any;
 
-  
+
   @Output() pokeInfos = new EventEmitter<string>();
-  
+
+
+
   getPokeInfo(){
     this.pokeInfos.emit(this.item)
   }
+
 }
