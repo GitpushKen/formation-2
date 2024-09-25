@@ -1,0 +1,54 @@
+.list {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.bg {
+    position: absolute;
+    width: 900px;
+    height: fit-content;
+    z-index: 0;
+}
+.bg img {
+    width: 900px;
+    scale: 1.1
+}
+
+.item img {
+    width: 300px;
+}
+
+.item {
+    transition: all ease-out 0.5s;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 30px;
+    width: 200px;
+}
+
+.buttons {
+    display: flex;
+
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+}
+
+.btn img {
+    width: 50px;
+}

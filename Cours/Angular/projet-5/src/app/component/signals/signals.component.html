@@ -1,0 +1,23 @@
+<div class="list">
+  <div class="bg">
+    <img src="assets/bg.png" alt="">
+  </div>
+
+  <div class="item" *ngFor="let pokemon of sortedPokemons(); let i = index">
+
+      <img src="{{pokemon.sprite}}" alt="">
+      <div class="detail">
+        <h2>{{ pokemon.name }}</h2>
+      <p>Likes: {{ pokemon.like }} | Dislikes: {{ pokemon.dislike }}</p>
+      <div class="buttons">
+        <div class="btn" (click)="like(pokemon.id)">
+          <img src="assets/up.png" alt="">
+        </div>
+        <div class="btn" (click)="dislike(pokemon.id)">
+          <img src="assets/down.png" alt="">
+        </div>
+      </div>
+      </div>
+  </div>
+
+</div>

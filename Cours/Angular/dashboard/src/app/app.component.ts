@@ -4,11 +4,12 @@ import { HeaderComponent } from "./component/header/header.component";
 import { Observable2Component } from './component/observable2/observable2.component';
 import { ObservableComponent } from './component/observable/observable.component';
 import { HttpRequestComponent } from './component/http-request/http-request.component';
+import { FirebaseComponent } from './component/firebase/firebase.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, Observable2Component, ObservableComponent, HttpRequestComponent],
+  imports: [RouterOutlet, FirebaseComponent, HeaderComponent, Observable2Component, ObservableComponent, HttpRequestComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

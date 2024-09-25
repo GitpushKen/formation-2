@@ -1,0 +1,13 @@
+{
+    "data" : {
+        "1": [
+        {"id": "1", "nom": "Bulbizarre", "sprite":  "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png"}
+        ],
+        "2": [
+            {"id": "2", "nom": "Carapuce", "sprite":  "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/002.png"}
+        ],
+        "3": [
+            {"id": "3", "nom": "Salamèche", "sprite":  "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/003.png"}
+        ]
+    }
+}

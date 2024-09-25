@@ -1,0 +1,13 @@
+.container-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100svw;
+    height: 100svh;
+}
+
+app-signals {
+    display: flex;
+    width: 900px;
+    height: 400px;
+}

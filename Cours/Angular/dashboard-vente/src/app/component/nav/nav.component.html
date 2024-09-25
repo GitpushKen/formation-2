@@ -1,0 +1,23 @@
+
+<nav>
+    <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <div class="main container">
+            <div class="texts">Accueil</div>
+        </div>
+    </a>
+    <a [routerLink]="['graph']">
+      <div class="graph container">
+        <div class="texts">Charts</div>
+    </div>
+    </a>
+    <a [routerLink]="['ventes']">
+      <div class="ventes container">
+        <div class="texts">Les plus vendus</div>
+    </div>
+    </a>
+    <a [routerLink]="['total']">
+      <div class="total container">
+        <div class="texts">Total des ventes</div>
+    </div>
+    </a>
+</nav>

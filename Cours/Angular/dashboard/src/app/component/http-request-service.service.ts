@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable, switchMap } from 'rxjs';
 
 interface pokemon{
   results : [
@@ -53,7 +53,7 @@ export class HttpRequestServiceService {
   getInfo(): Observable<pokemon> {
     return this.http.get<pokemon>(`${this.apiUrl}`)
   }
-  getInfo2(): Observable<pokemonDetail> {
+  getInfo2(response:any): Observable<pokemonDetail> {
     return this.http.get<pokemonDetail>(`${this.apiUrl}`+`${this.listPoke.name}`)
   }
 
@@ -62,17 +62,13 @@ export class HttpRequestServiceService {
     this.getInfo().subscribe({
       next: (data) => {(data.results).forEach(element => {
         this.listPoke.push(element);
-        this.listPoke.forEach((poke:any) => {
-          this.getInfo2().subscribe({
-            next: (data2) => {(data2.results).forEach(poke => {
-              this.showedPoke.push(poke)
-            })} 
-            
-           });
-
-
+        switchMap((response:any) => {
+          return this.getInfo2(response.results).pipe(map(details => {
+            details:details
+          }))
         })
-      });
+        })
+  }});
       console.log(this.list.length);
       for (let i = 0; i < this.list.length; i++) {
         // const poke = this.list[i].name;
@@ -87,6 +83,35 @@ export class HttpRequestServiceService {
     })
     return this.listPoke;
   }
+  // search(){
+  //   this.getInfo().subscribe({
+  //     next: (data) => {(data.results).forEach(element => {
+  //       this.listPoke.push(element);
+  //       this.listPoke.forEach((poke:any) => {
+  //         this.getInfo2().subscribe({
+  //           next: (data2) => {(data2.results).forEach(poke => {
+  //             this.showedPoke.push(poke)
+  //           })} 
+            
+  //          });
+
+
+  //       })
+  //     });
+  //     console.log(this.list.length);
+  //     for (let i = 0; i < this.list.length; i++) {
+  //       // const poke = this.list[i].name;
+  //       this.listPoke.push(this.list[i])
+  //       // this.pokemons.forEach((p:string) => {
+  //       //   this.list.push(p)
+  //       // }); 
+        
+  //     }
+  //     console.log(this.listPoke);
+  //     }
+  //   })
+  //   return this.listPoke;
+  // }
 
 
   
