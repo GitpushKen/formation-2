@@ -2,5 +2,10 @@
 <button (click)="search()">Pokemon</button>
 <ul>
     <app-poke-details (pokeInfos)="recevoirPokeInfo($event)" *ngFor="let item of listPoke; let i = index" [item]="item"></app-poke-details>
+
+  </ul><br>
+<ul>
+  <!-- <app-showed-poke (pokeInfos)="getDetail()" *ngFor="let item of showedPoke"></app-showed-poke> -->
+   <p>{{showedPoke.name}}</p>
 </ul>
-<app-showed-poke *ngFor="let item of showedPoke; let i = index" [item]="item"></app-showed-poke>
+

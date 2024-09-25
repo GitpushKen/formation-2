@@ -41,7 +41,6 @@ export class HttpRequestServiceService {
   pokemons:any = []
   pokemonDetails:any = []
   listPoke:any = []
-  list:any = []
   showedPoke:any = []
   namePoke:any = []
   outputed:any =[]
@@ -72,7 +71,7 @@ export class HttpRequestServiceService {
     this.namePoke = id.name
     console.log(this.namePoke)
   }
-  getInfo2(): Observable<pokemonDetail> {
+  getInfo2() :Observable<pokemonDetail>{
     return this.http.get<pokemonDetail>(`https://pokeapi.co/api/v2/pokemon/${this.namePoke}`)
   }
 
@@ -87,6 +86,8 @@ export class HttpRequestServiceService {
 
   outputFullData(){
     this.outputed = this.showedPoke
+    console.log(this.outputed);
+
   }
 
 
