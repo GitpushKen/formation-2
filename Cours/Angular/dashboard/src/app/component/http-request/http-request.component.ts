@@ -41,7 +41,7 @@ export class HttpRequestComponent {
 
   recevoirPokeInfo(id:any) {
     this.namePoke = this.getPoke.recevoirPokeInfos(id);
-    this.getDetail()
+
   }
 }
 

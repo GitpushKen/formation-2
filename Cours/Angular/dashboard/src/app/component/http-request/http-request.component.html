@@ -1,7 +1,7 @@
 <p>http-request works!</p>
 <button (click)="search()">Pokemon</button>
 <ul>
-    <app-poke-details (pokeInfos)="recevoirPokeInfo($event)" *ngFor="let item of listPoke; let i = index" [item]="item"></app-poke-details>
+    <app-poke-details (pokeInfos)="recevoirPokeInfo($event); getDetail()" *ngFor="let item of listPoke; let i = index" [item]="item"></app-poke-details>
 
   </ul><br>
 <ul>
