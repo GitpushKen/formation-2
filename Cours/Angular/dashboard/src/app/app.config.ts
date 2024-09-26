@@ -8,13 +8,14 @@ import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBlgPZMYZh7UtM1yN9nxpQ0fq3R7KbWGpk",
-  authDomain: "test-d5869.firebaseapp.com",
-  projectId: "test-d5869",
-  storageBucket: "test-d5869.appspot.com",
-  messagingSenderId: "184243924885",
-  appId: "1:184243924885:web:ffbf2c1de9cf913727909c"
+  apiKey: "AIzaSyBnkQ36OABYRnUX2DffkSbDlFP8CiFcu4M",
+  authDomain: "projet-cda-34964.firebaseapp.com",
+  projectId: "projet-cda-34964",
+  storageBucket: "projet-cda-34964.appspot.com",
+  messagingSenderId: "528936052457",
+  appId: "1:528936052457:web:3615184929c46e0e7bf278"
 };
+
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(), provideHttpClient(withFetch()), provideFirebaseApp(() => initializeApp(firebaseConfig)), provideFirestore(() => getFirestore())]

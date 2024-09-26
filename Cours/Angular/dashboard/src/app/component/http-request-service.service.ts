@@ -73,8 +73,7 @@ export class HttpRequestServiceService {
 
   getFullData(){
     this.getInfo2().subscribe({
-      next: (data) => {this.showedPoke.push(data.results);
-      console.log(this.showedPoke.name);
+      next: (data) => {console.log(data.results);
       }
     })
     return this.showedPoke;
